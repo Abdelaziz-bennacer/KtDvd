@@ -1,14 +1,14 @@
-import fr.abdel.AppConfig
+import fr.MainApp
 import fr.abdel.controller.MovieController
+import org.springframework.boot.SpringApplication
 import org.springframework.context.ApplicationContext
-import org.springframework.context.annotation.AnnotationConfigApplicationContext
-import org.springframework.context.support.ClassPathXmlApplicationContext
 
 fun main(args:Array<String>){
 
 
     //val context: ApplicationContext = ClassPathXmlApplicationContext("applicationContext.xml")
-    val context: ApplicationContext = AnnotationConfigApplicationContext(AppConfig::class.java)
+    //val context: ApplicationContext = AnnotationConfigApplicationContext(mainApp::class.java)
+    val context: ApplicationContext = SpringApplication.run(MainApp::class.java)
     val movieController = context.getBean(MovieController::class.java)
     movieController.addUsingConsole()
 

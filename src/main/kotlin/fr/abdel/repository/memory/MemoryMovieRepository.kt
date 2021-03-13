@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository
 
 private var movies = mutableListOf<Movie>()
 
-@Repository
+//@Repository
 class MovieRepository: MovieRepositoryInterface {
 
         override fun addMovie(movie: Movie){
